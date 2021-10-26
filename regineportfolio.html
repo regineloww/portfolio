@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Regine's Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<style type="text/css">
+	body {
+		font-family: 'Poppins', sans-serif;
+		background-color: #b5b5b5;
+	}
+	.container{
+		max-width: 1200px;
+		margin: 0px auto;
+		width: 95%;
+	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333;
+	}
+
+	li {
+		float: left;
+	}
+
+	li a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 30px;
+		text-decoration: none;
+	}
+	li a:hover {
+		background-color: #87c3c1;
+	}
+	.welcome-section {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 80vh;
+		background-color: #f7e2cb;
+		margin-bottom: 20px;
+		
+	}
+	.welcome-section > p {
+		font-size: 2rem;
+		font-weight: 200;
+		font-style: italic;
+		color: var(--main-red);
+	}
+	.about-section{
+		width: 100%;
+		height: 50vh;
+		background-color: #caa184;
+		border: 2px #f6ccbe;
+		border-radius: 10px;
+		padding: 10px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	.about-columns{
+		display: flex;
+		flex: wrap;
+	}
+	.col{
+		justify-content: space-between;
+	}
+	.col-1{width: 30%}
+	.col-2{width: 65%;
+		text-align: justify;}
+		.experience-section{
+			width: 100%;
+			height: 160vh;
+			background-color: #f6ccbe;
+			border: 2px #f6ccbe;
+			border-radius: 10px;
+			padding: 10px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		.education-section{
+			width: 100%;
+			height: 50vh;
+			background-color: #f6ccbe;
+			border: 2px #f6ccbe;
+			border-radius: 10px;
+			padding: 10px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		.center {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.skill-section{
+			width: 100%;
+			height: 45vh;
+			background-color: #f6ccbe;
+			border: 2px #f6ccbe;
+			border-radius: 10px;
+			padding: 10px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		.row {
+			display: flex;
+		}
+		.column {
+			flex: 33.33%;
+			padding: 10px;
+		}
+		.text-container-1 {
+			position: relative;
+			text-align: center;
+			color: white;
+		}
+		.text-container-2 {
+			position: relative;
+			text-align: center;
+			color: white;
+		}
+		.text-container-3 {
+			position: relative;
+			text-align: center;
+			color: white;
+		}
+		.text-container-4 {
+			position: relative;
+			text-align: center;
+			color: white;
+		}
+		/* Centered text */
+		.centered-1 {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.centered-2 {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.centered-3 {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.centered-4 {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.portfolio-section{
+			width: 100%;
+			height: 75vh;
+			background-color: #f6ccbe;
+			border: 2px #f6ccbe;
+			border-radius: 10px;
+			padding: 10px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		.contact{
+			display: flex;
+			flex: wrap;
+			justify-content: space-between;
+		}
+		th {background: #87c3c1;
+			color: white;
+			text-align: center;
+		}
+		th,td{
+			padding: 5px 8px;
+			border: 1px lightgrey solid;
+			text-align: justify;
+		}
+		tr{
+			background-color: rgb(242,242,242);
+		}
+		table{border-collapse: collapse;
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		.w3-container-1{
+			display: flex;
+			margin-top: 2rem;
+			flex: wrap;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.w3-container-2{
+			display: flex;
+			margin-top: 2rem;
+			flex: wrap;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.w3-card{
+			margin: auto;
+			align-items: center;
+			background-color: #87c3c1;
+		}
+		.project-image{
+			align-items: center;
+			text-align: center;
+		}
+		.project-title {
+			font-size: 1rem;
+			color: black;
+			text-align: center;
+			align-items: center;
+		}
+		h2{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<nav>
+			<ul>
+				<li><a href="#about-section">About</a></li>
+				<li><a href="#experience-section">Experience</a></li>
+				<li><a href="#education-section">Education</a></li>
+				<li><a href="#skill-section">Skill</a></li>
+				<li><a href="#portfolio-section">Portfolio</a></li>
+			</ul>
+		</nav>
+		<section id="welcome-section" class="welcome-section">
+			<img src="profile.png"alt="Profile"height="400px">
+			<h1><b>Regine Low</b></h1>
+			<p>Coder . Marketeer . Freelancer</p>
+			<div class="contact">
+				<a href="mailto:reginelow@hotmail.com">
+					<img src="email.png" alt="Email" style="width:64px;height:64px;">
+				</a>
+				<a href="https://www.facebook.com/reginelow">
+					<img src="facebook.png" alt="Facebook" style="width:64px;height:64px;">
+				</a>
+				<a href="https://www.instagram.com/reginelowzj/">
+					<img src="instagram.png" alt="Instagram" style="width:64px;height:64px;">
+				</a>
+				<a href="https://my.linkedin.com/in/reginelowzhijuin">
+					<img src="linkedin.png" alt="LinkedIn" style="width:64px;height:64px;">
+				</a>
+			</div>
+		</section>
+		<section id="about-section" class="about-section">
+			<h2><b>A short story about me</b></h2>
+			<div class="about-columns">
+				<div class="col col-1">
+					<img src="about.png"alt="About"height="350px">
+				</div>
+				<div class="col col-2">
+					<p style="font-size:130%;">I am Regine Low, a web developer and digital marketeer from Malaysia. A business and tech graduate who is independent, result-oriented and pressure-resistant, thanks to an accelerated academic upbringing and on-the-job training. Ready to take on new challenges with 6 years of rich experience in web development, digital marketing, e-commerce marketing, branding, business development and data analytics. Currently 28 and leading digital marketing for a fast-growing kids coding academy, Realfun Learning Centre.<br><br>To make your business grow to the next level, contact me to know more!</p>
+				</div>
+			</div>
+		</section>
+		<section id="experience-section" class="experience-section">
+			<h2><b>Experience</b></h2>
+			<table>
+				<tr>
+					<th width=240px>Position</th>
+					<th width="260px">Company</th>
+					<th width="180px">Duration</th>
+					<th width="500px">Role Description</th>
+				</tr>
+				<tr>
+					<td>Digital Marketeer</td>
+					<td>Realfun Learning Centre (Kids Coding Academy)</td>
+					<td>March 2021 - Present</td>
+					<td>•Plan, coordinate and execute marketing campaigns and advertising strategies across all company's digital platforms to meet its sales and branding objectives<br>•Generate leads and sales using Facebook, Instagram and Google ads<br>•Manage all the social media platforms of the company, including content planning, designs, photo and video shooting, as well as conducting FB Live<br>•Organize multiple educational events such as BugCrusher Virtual Coding Competition, FamilySquad Challenge, Girlscode Challenge and NASA International Space Apps Challenge to reach new and wider audience</td>
+				</tr>
+				<tr>
+					<td>Digital Marketeer</td>
+					<td>Go! 21 Education Limited (Study in Ireland Agent)</td>
+					<td>Apr - May 2021</td>
+					<td>•Website building/maintenance and creation of a wide range of engaging content for the website, including 
+						optimizing of copy and website for SEO<br>•Develop social media strategy and maintain the company’s social media presence across all channels<br>•Develop content including copywriting, graphics, videos, website pages, blog articles, social media posts, infographics, and student success stories, in English and Chinese<br>•Organize and promote webinars and online live events such as Pre-U in Ireland Virtual Fair & Seminar</td>
+					</tr>
+					<tr>
+						<td>Campaign Strategist</td>
+						<td>Shopee Mobile Malaysia Sdn. Bhd.</td>
+						<td>Aug - Dec 2020</td>
+						<td>•Conceptualize, develop and execute campaigns in Shopee such as big campaigns (11.11, 12.12), Super 
+							Brand Day, category campaigns, medium campaigns, ad-hoc campaigns and product launches<br>•Manage the development and execution of campaign strategies and activities that drive the success and growth of Electronics category<br>•Formulate effective promotional and campaign mechanics that drive potential buyers down the purchase funnel to improve conversion rates and grow sellers’ gross merchandise value<br>•Monitor progress of campaigns using various metrics (click through rates, conversion rates) and optimize campaign performance to meet revenue target</td>
+						</tr>
+						<tr>
+							<td>Senior Executive, Branding & Strategic Marketing</td>
+							<td>Mah Sing Group Bhd</td>
+							<td>Sep 2018 - July 2020</td>
+							<td>•Strategize and execute sales campaigns (Eazy To Own, Homes of Prosperity, Lock & Win, Desire) via 
+								online and offline channels to generate leads, increase bookings and meet group sales targets<br>•Drive lead-gen, traffic, engagement and SEO on Mah Sing website and blogs<br>•Develop Madam Loan, the first of its kind artificial-intelligence-enabled educational chatbot that facilitates home loan applications and addresses home loan queries from potential homebuyers<br>•Design and conduct market researches using survey tools (Qualtrics, Vase.ai) and social listening tool (Talkwalker) to provide insights and analysis into our customer sentiments and behaviors</td>
+							</tr>
+							<tr>
+								<td>Marketing Service Executive</td>
+								<td>A.W. Faber-Castell (M) Sdn. Bhd.</td>
+								<td>Nov 2015 - Aug 2018</td>
+								<td>•Develop and execute effective marketing strategies and marketing related activities (A&P, bookfair and colouring events, Back-to-School campaign, promotions, roadshow, exhibition, sampling, collaboration with media and other brands, advertisement and others)<br>•Support the planning and preparation of events like Popular Bookfest, MPH Bookfair and company 40th anniversary celebration event<br>•Develop attractive promotional stationery sets to enhance revenue growth<br>•Generate regular sales reports and analyse sales performance against sales target</td>
+							</tr>
+						</table>
+					</section>
+					<section id="education-section" class="education-section">
+						<h2><b>Education</b></h2>
+						<img src="education.png"alt="Education"height="350px"class="center">
+					</section>
+					<section id="skill-section" class="skill-section">
+						<h2><b>My Skills</b></h2>
+						<div class="row">
+							<div class="column">
+								<div class="text-container-1">
+									<img src="web development.jpg" alt="Web Development" style="width:100%">
+									<div class="centered-1"><b>Front-end Web Development</b> (HTML, CSS, Javascript, Bootstrap, Vue JS)</div>
+								</div>
+							</div>
+							<div class="column">
+								<div class="text-container-2">
+									<img src="digital marketing.jpg" alt="Digital Marketing" style="width:100%">
+									<div class="centered-2"><b>Digital Marketing</b> (Social media, SEO, SEM, email marketing, content marketing, paid ads, website, campaigns, data analytics)</div>
+								</div>
+							</div>
+							<div class="column">
+								<div class="text-container-3">
+									<img src="e-commerce.jpg" alt="E-commerce" style="width:100%">
+									<div class="centered-3"><b>E-commerce</b> (Campaign setup & execution, campaign strategies & mechanics development, sales optimization, campaign performance analysis)</div>
+								</div>
+							</div>
+							<div class="column">
+								<div class="text-container-4">
+									<img src="branding.jpg" alt="Branding" style="width:100%">
+									<div class="centered-4"><b>Branding</b> (Marketing strategies development, marketing activities execution, market research, campaign management, content production, performance analysis</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section id="portfolio-section" class="portfolio-section">
+						<h2><b>Featured Works</b></h2>
+						<div class="w3-container-1">
+							<div class="w3-card" style="width:300px;height:250px;">
+								<a
+								href="https://regineloww.github.io/theanalogspecialists/theanalogspecialists.html"
+								>
+								<img class="project-image"
+								src="theanalogspecialist.jpg"
+								alt="project" style="width:100%"
+								>
+								<div class="w3-container">
+									<p class="project-title"><b>The Analog Specialist Website</b></p>
+								</div>
+							</a>
+						</div>
+						<div class="w3-card" style="width:300px;height:250px;">
+							<a href="https://regineloww.github.io/table/table-exe.html"
+							>
+							<img class="project-image"
+							src="table.jpg"
+							alt="project" style="width:100%"
+							>
+							<div class="w3-container">
+								<p class="project-title"><b>Table</b></p>
+							</div>
+						</a>
+					</div>
+					<div class="w3-card" style="width:300px;height:250px;">
+						<a href="https://regineloww.github.io/keepcalmanddocoding/keepcalm.html"
+						>
+						<img class="project-image"
+						src="keepcalm.jpg"
+						alt="project" style="width:100%"
+						>
+						<div class="w3-container">
+							<p class="project-title"><b>Keep Calm and Do Coding Poster</b></p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="w3-container-2">
+				<div class="w3-card" style="width:300px;height:250px;">
+					<a href="https://regineloww.github.io/rps/rps.html"
+					>
+					<img class="project-image"
+					src="rps.jpg"
+					alt="project" style="width:100%"
+					>
+					<div class="w3-container">
+						<p class="project-title"><b>Rock Paper Scissors</b></p>
+					</div>
+				</a>
+			</div>
+			<div class="w3-card" style="width:300px;height:250px;">
+				<a href="https://regineloww.github.io/guess-the-number/guess-the-number.html"
+				>
+				<img class="project-image"
+				src="guess-the-number.jpg"
+				alt="project" style="width:100%"
+				>
+				<div class="w3-container">
+					<p class="project-title"><b>Guess the Number</b></p>
+				</div>
+			</a>
+		</div>
+		<div class="w3-card" style="width:300px;height:250px;">
+			<a href="https://regineloww.github.io/dom/dom.html"
+			>
+			<img class="project-image"
+			src="dom.jpg"
+			alt="project" style="width:100%"
+			>
+			<div class="w3-container">
+				<p class="project-title"><b>Document Object Model</b></p>
+			</div>
+		</a>
+	</div>
+</div>
+</section>
+</div>
+</body>
+</html>
